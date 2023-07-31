@@ -2,6 +2,9 @@ const { default: styled } = require('@emotion/styled');
 
 export const ContactUiForm = styled.form`
   width: 400px;
+  padding: 20px;
+  border: 2px solid rgb(17, 17, 17);
+  border-radius: 3px;
 `;
 export const ContactDiv = styled.div`
   display: flex;
@@ -14,4 +17,11 @@ export const ContactLabel = styled.label`
   font-size: 18px;
   font-weight: 600;
 `;
-export const ContactButton = styled.button``;
+export const ContactButton = styled.button`
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+`;

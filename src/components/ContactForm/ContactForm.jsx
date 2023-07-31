@@ -6,6 +6,7 @@ import {
   ContactUiForm,
 } from './contactForm.styled';
 import PropTypes from 'prop-types';
+import Section from 'components/Section/Section';
 // import { nanoid } from 'nanoid';
 
 const INITIAL_STATE = {
@@ -35,12 +36,12 @@ export default class ContactForm extends Component {
 
   render() {
     return (
-      <>
+      <Section title="Phonebook">
         <ContactUiForm type="submit" onSubmit={event => this.handleForm(event)}>
           <ContactDiv>
             <ContactLabel htmlFor="name">Name</ContactLabel>
             <input
-              className="input"
+              className="input-field"
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -54,7 +55,7 @@ export default class ContactForm extends Component {
           <ContactDiv>
             <ContactLabel htmlFor="number">Tel</ContactLabel>
             <input
-              className="input"
+              className="input-field"
               type="tel"
               name="number"
               pattern="^[+]?[0-9\\.\\-\\s]{1,15}$"
@@ -67,7 +68,7 @@ export default class ContactForm extends Component {
 
           <ContactButton type="submit">add contact</ContactButton>
         </ContactUiForm>
-      </>
+      </Section>
     );
   }
 }

@@ -8,6 +8,7 @@ export default function FilterContacts({
     <>
       <h3>{title}</h3>
       <input
+        className="input-field"
         type="text"
         name="filter"
         value={filter}
